@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, FlatList, StatusBar } from 'react-native';
 import CardQuote from './components/card/card.component';
+import { colorDefault, colors } from './utils/colors';
 
 
 const notList = [
@@ -15,7 +16,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar
         animated={true}
-        backgroundColor="#c64242"
+        backgroundColor={colorDefault.apple}
        />
       <FlatList
         data={notList}
@@ -35,7 +36,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#EBF5F7',
+    backgroundColor: colorDefault.white,
     alignItems: 'center',
     justifyContent: 'center',
   },

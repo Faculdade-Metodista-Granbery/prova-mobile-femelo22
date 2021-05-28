@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Card, Paragraph } from 'react-native-paper';
+import {colorDefault} from '../../utils/colors';
 
 
 const styles = StyleSheet.create({
     card: {
-        backgroundColor: '#EBF5F7',
+        backgroundColor: colorDefault.ice,
         margin: 10,
         borderRadius: 20,
         flex: 1,
@@ -13,7 +14,7 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
     },
     content: {
-        backgroundColor: '#FAE8E0',
+        backgroundColor: colorDefault.salmon,
     },
     cover: {
         height: 220,

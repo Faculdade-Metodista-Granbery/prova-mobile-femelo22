@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Card, Paragraph } from 'react-native-paper';
 import {colorDefault} from '../../utils/colors';
+import StartButton from '../button/start-button';
 
 
 const styles = StyleSheet.create({
@@ -34,6 +35,13 @@ const CardQuote = ({task, background}) => {
             <Card.Actions>
                 <Paragraph>{task}</Paragraph>
             </Card.Actions>
+            <View style={styles.buttonWrapper}>
+                    <StartButton
+                        title="Start"
+                        backgroundColor='#56e30e'
+                        onPress={() => setIsStarted(false)}
+                    />
+            </View>
         </Card>
     )
 }

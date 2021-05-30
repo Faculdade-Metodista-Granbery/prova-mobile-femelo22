@@ -20,6 +20,10 @@ const styles = StyleSheet.create({
     cover: {
         height: 220,
     },
+    buttonWrapper: {
+        alignContent: 'center',
+        justifyContent: 'center'
+    }
 });
 
 const CardQuote = ({task, background}) => {
@@ -36,7 +40,7 @@ const CardQuote = ({task, background}) => {
                 <Paragraph>{task}</Paragraph>
             </Card.Actions>
             <View style={styles.buttonWrapper}>
-                    <StartButton
+                    <StartButton 
                         title="Start"
                         backgroundColor='#56e30e'
                         onPress={() => setIsStarted(false)}

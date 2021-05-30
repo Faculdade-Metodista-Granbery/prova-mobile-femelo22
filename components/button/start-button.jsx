@@ -31,6 +31,8 @@ const RoundedButton = ({
     backgroundColor= '#a7c9db',
     style = {}, 
     textStyle = {},
+    alignItems = 'center',
+    justifyContent = 'center',
     ...otherProps
 }) =>{
 

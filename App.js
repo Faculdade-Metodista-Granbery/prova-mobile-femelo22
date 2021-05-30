@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View, SafeAreaView, FlatList, StatusBar } from 'react-native';
 import CardQuote from './components/card/card.component';
 import { colorDefault, colors } from './utils/colors';
+import { ThemeProvider } from 'styled-components'
 
 
 const notList = [
@@ -12,24 +13,25 @@ const notList = [
 
 export default function App() {
   return (
-
-    <SafeAreaView style={styles.container}>
-      <StatusBar
-        animated={true}
-        backgroundColor={colorDefault.apple}
-       />
-      <FlatList
-        data={notList}
-        keyExtractor={item => item.id}
-        renderItem={({ item }) =>
-          <CardQuote
-            task={item.task}
-            background={item.background}
-          />
-        }
-      >
-        </FlatList>
-    </SafeAreaView>
+    <ThemeProvider theme={{ background: '#000', color: '#fff'}}>
+      <SafeAreaView style={styles.container}>
+        <StatusBar
+          animated={true}
+          backgroundColor={colorDefault.apple}
+        />
+        <FlatList
+          data={notList}
+          keyExtractor={item => item.id}
+          renderItem={({ item }) =>
+            <CardQuote
+              task={item.task}
+              background={item.background}
+            />
+          }
+        >
+          </FlatList>
+      </SafeAreaView>
+    </ThemeProvider>
   );
 }
 
